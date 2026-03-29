@@ -4,7 +4,7 @@ Project Title: Local VM Monitoring and Auto-Scaling to GCP
 ------------------------------------------------------------
 1. Project Overview
 ------------------------------------------------------------
-This project demonstrates a cloud bursting solution where a local virtual machine (VM) is monitored for CPU usage. When CPU usage exceeds a defined threshold, a new VM is automatically created in Google Cloud Platform (GCP). When the load decreases, the cloud VM is deleted to optimize resource usage and cost.
+This project demonstrates a cloud bursting solution where a local virtual machine (VM) is monitored for CPU usage. When CPU usage exceeds a defined threshold, a new VM is automatically created in Google Cloud Platform (GCP). 
 
 ------------------------------------------------------------
 2. Technologies Used
@@ -93,11 +93,6 @@ Step 7: Firewall Configuration (One-time setup)
 6. GCP VM is created automatically
 7. Nginx is installed and serves web page
 
-When CPU usage decreases:
-1. Low CPU alert is triggered
-2. Webhook deletes the GCP VM
-3. Resources are freed to reduce cost
-
 ------------------------------------------------------------
 6. Sample Application
 ------------------------------------------------------------
@@ -159,6 +154,5 @@ This simplifies setup and ensures all components are started correctly.
 - Automatic scale-out (VM creation)
 - Automatic scale-in (VM deletion)
 - Cloud-based deployment
-- Cost optimization
 
 
