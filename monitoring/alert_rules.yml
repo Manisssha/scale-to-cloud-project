@@ -1,0 +1,19 @@
+groups:
+- name: cloud_burst
+  rules:
+
+  - alert: High_CPU
+    expr: (1 - avg(rate(node_cpu_seconds_total{mode="idle"}[2m]))) * 100 > 75
+    for: 15s
+    labels:
+      severity: critical
+    annotations:
+      description: "CPU utilization > 75%"
+
+  - alert: High_RAM
+    expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 75
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      description: "RAM utilzation > 75%"
