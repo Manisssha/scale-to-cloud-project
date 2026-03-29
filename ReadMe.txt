@@ -31,7 +31,7 @@ scale-to-cloud-project/
 │
 ├── scripts/
 │   ├── burst.sh
-│   └── webhook_receiver.py
+│   └── webhook_client.py
 │
 ├── app/
 │   ├── app.py
